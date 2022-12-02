@@ -1,1 +1,0 @@
-Link to heroku app - https://product-recommendation-deepthi.herokuapp.com/
