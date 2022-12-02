@@ -1,21 +1,40 @@
-Problem Statement:
-A bike-sharing system is a service in which bikes are made available for shared use to individuals on a short term basis for a price or free. Many bike share systems allow people to borrow a bike from a "dock" which is 
-usually computer-controlled wherein the user enters the payment information, and the system unlocks it. This bike can then be returned to another dock belonging to the same system.
+Business Understanding:
 
-A US bike-sharing provider BoomBikes has recently suffered considerable dips in their revenues due to the ongoing Corona pandemic. The company is finding it very difficult to sustain in the current market scenario. 
-So, it has decided to come up with a mindful business plan to be able to accelerate its revenue as soon as the ongoing lockdown comes to an end, and the economy restores to a healthy state. 
+You work for a consumer finance company which specialises in lending various types of loans to urban customers. 
+When the company receives a loan application, the company has to make a decision for loan approval based on the applicant’s profile. 
+Two types of risks are associated with the bank’s decision:
 
-In such an attempt, BoomBikes aspires to understand the demand for shared bikes among the people after this ongoing quarantine situation ends across the nation due to Covid-19. 
-They have planned this to prepare themselves to cater to the people's needs once the situation gets better all around and stand out from other service providers and make huge profits.
+	1. If the applicant is likely to repay the loan, then not approving the loan results in a loss of business to the company
 
-They have contracted a consulting company to understand the factors on which the demand for these shared bikes depends. Specifically, they want to understand the factors affecting 
-the demand for these shared bikes in the American market. The company wants to know:
-•	Which variables are significant in predicting the demand for shared bikes.
-•	How well those variables describe the bike demands
-Based on various meteorological surveys and people's styles, the service provider firm has gathered a large dataset on daily bike demands across the American market based on some factors.
+	2. If the applicant is not likely to repay the loan, i.e. he/she is likely to default, then approving the loan may lead to a financial loss for the company
+
+ 
+The aim is to identify patterns which indicate if a person is likely to default, which may be used for taking actions such as denying the loan, reducing the amount of loan, lending (to risky applicants) at a higher interest rate, etc.
+
+ 
+When a person applies for a loan, there are two types of decisions that could be taken by the company:
+
+	1. Loan accepted: If the company approves the loan, there are 3 possible scenarios described below:
+
+		a) Fully paid: Applicant has fully paid the loan (the principal and the interest rate)
+
+		b) Current: Applicant is in the process of paying the instalments, i.e. the tenure of the loan is not yet completed. These candidates are not labelled as 'defaulted'.
+
+		c) Charged-off: Applicant has not paid the instalments in due time for a long period of time, i.e. he/she has defaulted on the loan 
+
+	2. Loan rejected: The company had rejected the loan (because the candidate does not meet their requirements etc.). Since the loan was rejected, there is no transactional history of those applicants with the company and so this data is not available with the company (and thus in this dataset)
 
 
-Business Goal:
-You are required to model the demand for shared bikes with the available independent variables. It will be used by the management to understand how exactly the demands vary with different features. 
-They can accordingly manipulate the business strategy to meet the demand levels and meet the customer's expectations. 
-Further, the model will be a good way for management to understand the demand dynamics of a new market. 
+
+Business Objectives
+This company is the largest online loan marketplace, facilitating personal loans, business loans, and financing of medical procedures. Borrowers can easily access lower interest rate loans through a fast online interface. 
+Like most other lending companies, lending loans to ‘risky’ applicants is the largest source of financial loss (called credit loss). 
+The credit loss is the amount of money lost by the lender when the borrower refuses to pay or runs away with the money owed. 
+In other words, borrowers who default cause the largest amount of loss to the lenders. In this case, the customers labelled as 'charged-off' are the 'defaulters'. 
+
+If one is able to identify these risky loan applicants, then such loans can be reduced thereby cutting down the amount of credit loss. Identification of such applicants using EDA is the aim of this case study.
+
+In other words, the company wants to understand the driving factors (or driver variables) behind loan default, i.e. the variables which are strong indicators of default.  
+The company can utilise this knowledge for its portfolio and risk assessment. 
+
+
